@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles.css";
+import "./TempAppstyles.css";
 
 const TempApp = () => {
   const [temperatureValue, setTemperatureValue] = useState(10);
