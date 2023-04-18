@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles.css";
+import "./TempAppstyles.css";
 
 const TempApp = () => {
   const [temperatureValue, setTemperatureValue] = useState(10);
@@ -29,6 +29,11 @@ const TempApp = () => {
       setTemperatureColor("freezing");
     }
   };
+
+  function alertTemp (){
+    alert("The heating has started")
+  };
+
   return (
     <div className="app-container">
       <div className="temperature-display-container">
@@ -38,7 +43,7 @@ const TempApp = () => {
       </div>
       <div className="start-button-container">
         <div className="start-button">
-          <span>Start</span>
+          <start-button onClick={alertTemp} >Start</start-button>
          </div>
       </div> {}
       <div className="button-container">
