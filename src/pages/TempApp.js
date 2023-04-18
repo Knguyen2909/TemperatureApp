@@ -6,13 +6,15 @@ const TempApp = () => {
   const [temperatureColor, setTemperatureColor] = useState("cold");
 
   const increaseTemperature = () => {
-    if (temperatureValue === 30) return;
+    if (temperatureValue === 40) return;
 
     const newTemperature = temperatureValue + 1;
 
     setTemperatureValue(newTemperature);
-    if (newTemperature >= 15) {
+    if (newTemperature >= 35 && newTemperature <= 40) {
       setTemperatureColor("hot");
+    } else if (newTemperature >= 20 && newTemperature <= 34){
+      setTemperatureColor("warm");
     }
   };
 
@@ -21,11 +23,12 @@ const TempApp = () => {
 
     const newTemperature = temperatureValue - 1;
     setTemperatureValue(newTemperature);
-    if (newTemperature < 20) {
+    if (newTemperature <= 19 && newTemperature >= 10) {
       setTemperatureColor("cold");
+    } else if (newTemperature <=9){
+      setTemperatureColor("freezing");
     }
   };
-
   return (
     <div className="app-container">
       <div className="temperature-display-container">
@@ -33,12 +36,19 @@ const TempApp = () => {
           {temperatureValue}°C
         </div>
       </div>
+      <div className="start-button-container">
+        <div className="start-button">
+          <span>Start</span>
+         </div>
+      </div> {}
       <div className="button-container">
         <button onMouseDown={increaseTemperature}>+</button>
         <button onClick={decreaseTemperature}>-</button>
       </div>
     </div>
   );
+  
 };
 
 export default TempApp;
+
