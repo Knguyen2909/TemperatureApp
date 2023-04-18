@@ -30,6 +30,9 @@ const TempApp = () => {
     }
   };
 
+  function alertTemp (){
+    alert("The heating has started")
+  };
   return (
     <div className="app-container">
       <div className="temperature-display-container">
