@@ -1,14 +1,25 @@
-import React, { useState } from 'react';
-import Calendar from 'react-calendar';
+import React from "react";
+import ScheduleSelector from 'react-schedule-selector'
 
-function ScheduleManager() {
-  const [value, onChange] = useState(new Date());
+class ScheduleManager extends React.Component {
+  state = { schedule : [] }
 
-  return (
-    <div>
-      <Calendar onChange={onChange} value={value} />
-    </div>
-  );
+  handleChange = newSchedule => {
+    this.setState({ schedule: newSchedule })
+  }
+
+  render() {
+    return (
+      <ScheduleSelector
+        selection={this.state.schedule}
+        numDays={7}
+        minTime={1}
+        maxTime={24}
+        hourlyChunks={1}
+        onChange={this.handleChange}
+      />
+    )
+  }
 }
 
 export default ScheduleManager;
