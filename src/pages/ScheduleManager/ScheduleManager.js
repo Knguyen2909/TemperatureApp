@@ -1,52 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import ScheduleSelector from 'react-schedule-selector'
 import "./ScheduleManagerstyles.css";
 
 
-class ScheduleManager extends React.Component {
-  state = { schedule: [] }
+function ScheduleManager() {
+  const [schedule, setSchedule] = useState([]);
+  const [currentPage, setCurrentPage] = useState('home');
 
-  handleChange = newSchedule => {
-    this.setState({ schedule: newSchedule })
+  function handleClick() {
+    setCurrentPage('TempApp');
+    window.location = "/TemperatureControl"
+  }
+  
+  function alertTemp() {
+    alert("The schedule has been confirmed")
   }
 
-
-
-  render() {
-
-    function alertTemp() {
-      alert("The settings have been confirmed")
-    };
-
-    return (
-      <div className="app-container">
- 
+  return (
+    <div className="app-container">
         <div className="temperature-display-container">
-          
-          <div>
-            
-          <div className="top-border"> </div>
-            <ScheduleSelector
-              selection={this.state.schedule}
-              numDays={7}
-              minTime={1}
-              maxTime={24}
-              hourlyChunks={1}
-              dateFormat="dd"
-              onChange={this.handleChange}
-            />
-            
-          </div>
-          
+        <div className="schedule-manager">
+
+          <div className="top-border"></div>
         </div>
-        <div className="top-border"> </div>
-        <div className="start-button">
-          
-          <start-button onClick={alertTemp}>Confirm</start-button>
+
+        <div className="back-button-container">
+          <div className="back-button" onClick={handleClick}>
+            Back<span> </span>
+          </div>
+
+          <ScheduleSelector
+            selection={schedule}
+            numDays={7}
+            minTime={1}
+            maxTime={24}
+            hourlyChunks={1}
+            dateFormat="dd"
+            onChange={setSchedule}
+          />
+        </div>
+
+        <div className="start-button-container">
+          <button className="start-button" onClick={alertTemp}>Confirm</button>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default ScheduleManager;
