@@ -13,7 +13,7 @@ const TempApp = () => {
     setTemperatureValue(newTemperature);
     if (newTemperature >= 35 && newTemperature <= 40) {
       setTemperatureColor("hot");
-    } else if (newTemperature >= 20 && newTemperature <= 34){
+    } else if (newTemperature >= 20 && newTemperature <= 34) {
       setTemperatureColor("warm");
     }
   };
@@ -25,15 +25,21 @@ const TempApp = () => {
     setTemperatureValue(newTemperature);
     if (newTemperature <= 19 && newTemperature >= 10) {
       setTemperatureColor("cold");
-    } else if (newTemperature <=9){
+    } else if (newTemperature <= 9) {
       setTemperatureColor("freezing");
     }
   };
 
-  function alertTemp (){
+  const [currentPage, setCurrentPage] = useState('home');
+
+  function handleClick() {
+    setCurrentPage('');
+    window.location = "/ScheduleManager"
+  }
+  
+  function alertTemp() {
     alert("The heating has started")
   };
-
   return (
     <div className="app-container">
       <div className="temperature-display-container">
@@ -41,18 +47,22 @@ const TempApp = () => {
           {temperatureValue}°C
         </div>
       </div>
-      <div className="start-button-container">
-        <div className="start-button">
-          <start-button onClick={alertTemp} >Start</start-button>
-         </div>
-      </div> {}
+      <div class="start-button-container">
+        <div className="plus-button" onClick={handleClick}>
+            +<span> </span>
+          </div>
+        <div class="start-button" onClick={alertTemp}>
+          Start<span> </span>
+        </div>
+      </div>
+      { }
       <div className="button-container">
         <button onMouseDown={increaseTemperature}>+</button>
         <button onClick={decreaseTemperature}>-</button>
       </div>
     </div>
   );
-  
+
 };
 
 export default TempApp;
