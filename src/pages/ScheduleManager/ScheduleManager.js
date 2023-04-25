@@ -7,10 +7,16 @@ function ScheduleManager() {
   const [schedule, setSchedule] = useState([]);
   const [currentPage, setCurrentPage] = useState('home');
 
-  function handleClick() {
+  function handleTempClick() {
     setCurrentPage('TempApp');
     window.location = "/TemperatureControl"
   }
+
+  function handleTestingClick() {
+    setCurrentPage('Testing');
+    window.location = "/Testing"
+  }
+
   function alertTemp() {
     alert("The schedule has been confirmed")
   }
@@ -27,11 +33,12 @@ function ScheduleManager() {
             onChange={setSchedule}
           />
       <div className="back-button-container">
-        <div className="back-button" onClick={handleClick}>
+        <div className="back-button" onClick={handleTempClick}>
           Back<span> </span>
         </div>
         
         <div className="temperature-display-container">
+          
           <div className="schedule-manager">
             <div className="top-border"></div>
           </div>
@@ -40,7 +47,9 @@ function ScheduleManager() {
         
       </div>
       <div className="start-button-container">
-        <button className="start-button" onClick={alertTemp}>Confirm</button>
+      <div className="start-button" onClick={handleTestingClick}>
+          Confirm<span> </span>
+        </div>
       </div>
       
     </div>

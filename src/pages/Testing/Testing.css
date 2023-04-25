@@ -1,0 +1,91 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+  }
+  
+  .app-container {
+    height: 896px;
+    width: 414px;
+    background: #1c96d8;
+    border-radius: 20px;
+    box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.75);
+  }
+  
+  .top-border{
+    margin-top: 50%;
+  }
+
+  .start-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+  }
+
+  .start-button {
+    display: flex; 
+    border-radius: 10%;
+    color: #ffffff;
+    height: 50px;
+    width: 170px;
+    align-items:center;
+    border-radius: 0 0 0 0;
+    position: relative;
+    font-size: 48px;
+    border: 3px #ffffff solid;
+    background: #006eff;
+    margin-top: 80%;
+    justify-content: center;
+    margin: auto
+  }
+
+
+
+  .temperature-display-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    margin-bottom: 50px;
+  }
+  
+  .temperature-display {
+    display: flex;
+    border-radius: 50%;
+    color: #ffffff;
+    height: 220px;
+    width: 220px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    border: 3px #ffffff solid;
+    transition: background 0.5s;
+  }
+  
+  .back-button {
+    display: flex; 
+    border-radius: 10%;
+    color: #ffffff;
+    height: 50px;
+    width: 120px;
+    align-items:center;
+    border-radius: 0 0 0 0;
+    position: relative;
+    font-size: 48px;
+    border: 3px #ffffff solid;
+    background: #006eff;
+  }
+
+  .back-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+  }
