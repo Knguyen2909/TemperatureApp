@@ -36,7 +36,6 @@ const TempApp = () => {
     setCurrentPage('');
     window.location = "/ScheduleManager"
   }
-
   function alertTemp() {
     alert("The heating has started")
   };

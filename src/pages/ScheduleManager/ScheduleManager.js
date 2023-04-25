@@ -11,7 +11,6 @@ function ScheduleManager() {
     setCurrentPage('TempApp');
     window.location = "/TemperatureControl"
   }
-
   function alertTemp() {
     alert("The schedule has been confirmed")
   }
