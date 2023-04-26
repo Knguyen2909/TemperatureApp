@@ -17,29 +17,32 @@ function Testing() {
     return (
         <div className="app-container">
 
+            <div className="title-text-button" >
+                Friday<span> </span>
+            </div>
+
+            <div className="temperature-display-container">
+                <div>
+                    <div className="text-button" >Start Time<span> </span>
+                    </div>
+
+                    <div className="text-button" >End Time<span> </span>
+                    </div>
+
+                    <div className="text-button" >Temperature<span> </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div className="start-button-container">
+                <button className="start-button" onClick={alertTemp}>Confirm</button>
+            </div>
             <div className="back-button-container">
                 <div className="back-button" onClick={handleClick}>
                     Back<span> </span>
                 </div>
-
-                <div className="temperature-display-container">
-                    <div>
-                        <header>Friday</header>
-                        <div className="top-border"></div>
-                    </div>
-
-
-                </div>
-                <div>
-                        <button id="start-time-button">Start Time</button>
-                        <button id="end-time-button">End Time</button>
-                        <button id="temperature-button">Temperature</button>
-                    </div>
             </div>
-            <div className="start-button-container">
-                <button className="start-button" onClick={alertTemp}>Confirm</button>
-            </div>
-
         </div>
 
     )

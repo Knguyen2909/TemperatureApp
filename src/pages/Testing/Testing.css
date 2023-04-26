@@ -46,15 +46,6 @@ body {
   }
 
 
-
-  .temperature-display-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70%;
-    margin-bottom: 50px;
-  }
-  
   .temperature-display {
     display: flex;
     border-radius: 50%;
@@ -67,6 +58,62 @@ body {
     font-size: 48px;
     border: 3px #ffffff solid;
     transition: background 0.5s;
+  }
+  
+  .temperature-display-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    margin-bottom: 50px;
+  }
+  
+  .title-text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+  }
+
+  .title-text-button {
+    display: flex; 
+    border-radius: 10%;
+    color: #ffffff;
+    height: 50px;
+    width: 100px;
+    align-items:center;
+    border-radius: 0 0 0 0;
+    position: relative;
+    font-size: 32px;
+
+    background: #1c96d8;
+    margin-top: 80%;
+    justify-content: center;
+    margin: auto
+  }
+
+  .text-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+  }
+
+  .text-button {
+    display: flex; 
+    border-radius: 10%;
+    color: #ffffff;
+    height: 50px;
+    width: 300px;
+    align-items:center;
+    border-radius: 0 0 0 0;
+    position: relative;
+    font-size: 32px;
+
+    background: #1c96d8;
+    margin-top: 80%;
+    justify-content: center;
+    margin: auto
   }
   
   .back-button {
