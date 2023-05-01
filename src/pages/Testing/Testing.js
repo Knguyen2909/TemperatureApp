@@ -30,7 +30,7 @@ function Testing() {
                             variant="primary"
                             style={{ borderRadius: '5px', width: "200px" }}
                         >
-                            Schedule
+                            Schedule Time
                         </Dropdown.Toggle>
                         <Dropdown.Menu style={{ borderRadius: '5px', width: "200px" }}>
                             <Dropdown.Item>9:00AM - 10:00 AM</Dropdown.Item>
